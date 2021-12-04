@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import CardCreator from "./component/CardCreator"
+import Card from "./component/Card"
+function App(){
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [addItem,setItem]=useState([])
+    const linkEvent=(initialData)=>{
+           setItem((prevData)=>{
+               return [...prevData,initialData]}) 
+    } 
+
+    return <>
+    <CardCreator  linkFunction={linkEvent}/>
+     {
+        addItem.map((val,index)=>{
+             return <Card  
+                    key={index}
+                    title={val.Title}
+                    price={val.Price}
+                    imgAdd={val.imgURL}
+                    />
+})}
+    
+    </>
 }
-
 export default App;

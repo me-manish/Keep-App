@@ -1,0 +1,78 @@
+body{
+    width:95%;
+    margin:auto;
+    display:block;
+}
+
+
+.card-box{
+    position: relative;
+    border-radius:5px;
+    margin:100px 10px 0px 20px;
+    padding:10px 10px;
+    width:22%;
+    box-shadow:0px 1px 2px 1px black;
+    display:inline-block;
+}
+
+.card-box:hover{
+    box-shadow:0px 1px 10px 1px black;
+}
+
+
+
+.deleteIcon{
+    right:0;
+    bottom:5px;
+    position:absolute;
+    color:gold;
+}
+
+.imgBox{
+    width:100%;
+    height:200px;
+    border-radius: 5px;
+}
+
+.btn-warning{
+    font-size: 10px;
+}
+
+
+@media (max-width:1077px) and (min-width:700px){
+     .card-box{
+         width:28%;
+     }
+}
+
+@media (max-width:700px){
+    .card-box{
+        width:45%;
+        margin-left:10px;
+    }
+    .imgBox{
+        width:100%;
+    }
+}
+
+@media (max-width:400px) and (min-width:300px){
+    .card-box{
+        width:44%;
+    }
+    .imgBox{
+        height:100px;
+    }
+    .btn-warning{
+        font-size: 10px;
+    }
+}
+
+@media (max-width:350px) and (min-width:300px){
+    .card-box{
+        width:40%;
+    }
+    .btn-warning{
+        font-size: 10px;
+    }
+    
+}
