@@ -12,13 +12,14 @@ function App(){
     return <>
     <CardCreator  linkFunction={linkEvent}/>
      {
-        addItem.map((val,index)=>{
+        addItem.map((data,index)=>{
              return <Card  
                     key={index}
-                    title={val.Title}
-                    price={val.Price}
-                    imgAdd={val.imgURL}
+                    title={data.Title}
+                    task={data.Task}
+                    imgAdd={data.imgURL}
                     />
+             
 })}
     
     </>
